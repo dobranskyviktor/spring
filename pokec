@@ -1,0 +1,53 @@
+Spring - inversion of control
+Spring je kompletne POJO based
+Spring je kvoli nespokojnosti s JEE
+Zabezpecuje best practices
+ma patterny ako Singleton, Factory, Abstract Factory
+---------------
+
+Spring riesi:
+- testovatelnost, udrziavatelnost, skalovatelnost, rozdeluje veci, cachovanie, redukuje komplexitu kodu,
+zameriava sa na business, komplex kod je mozne mat hotovy rychlejsie
+
+- prinasa anotacie alebo xml based konfiguraciu
+
+priklad, spring pouziva nejaky pattern interne:
+public Car findCar(Spring id){
+    return getEntityManager().find(Car.class, id);
+}
+
+
+- vsetko v Springu je POJO
+--------------------------------
+WORA - write once run everywhere
+
+Spring 4 pozaduje Javu 8
+
+- spring sa snazi vyhnut hardcoded veciam...
+- snazi sa napchat veci do konfiguracie?
+--------------------------------------
+XML konfiguracia je lahsia
+na oddelenie zaujmov - nepouzivame new, mozme vyuzivat ine prostredia bez kompilovania kodu iba inym xmlkom
+
+-----------------
+Spring context je tak trocha hashmapa
+
+
+ako inicializovat objekt:
+- pouzitim setter injection
+- constructor injection - je index based a nie name based (ak mam viacej argumentov v konstruktore tak musim pouzit pre kazdy jeho index)
+- kombinacia oboch
+
+--------------------------
+Autowire (property pre bean)
+4 typy:
+- podla typu - musi existovat iba jedna taka trieda takeho typu, inak bude error
+- podla mena - mozme mat viacej objektov a pouzit specificky objekt
+- podla konstruktora
+- ziadny - nemoze byt autowireing
+
+
+
+
+
+
