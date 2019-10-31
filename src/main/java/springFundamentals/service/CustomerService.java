@@ -1,8 +1,8 @@
-package service;
+package springFundamentals.service;
 
 import java.util.List;
 
-import model.Customer;
+import springFundamentals.model.Customer;
 
 public interface CustomerService
 {

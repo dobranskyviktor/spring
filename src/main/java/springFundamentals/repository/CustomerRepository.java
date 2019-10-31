@@ -1,8 +1,8 @@
-package repository;
+package springFundamentals.repository;
 
 import java.util.List;
 
-import model.Customer;
+import springFundamentals.model.Customer;
 
 public interface CustomerRepository
 {

@@ -46,6 +46,34 @@ Autowire (property pre bean)
 - podla konstruktora
 - ziadny - nemoze byt autowireing
 
+--------------------------
+konfiguracia pomocou anotacii
+- anotation scanner
+
+Hlavne stereotypy anotacii su:
+@Component - pouzivame pre POJO alebo bean
+@Service - biznis logika
+@Repository - data vrstva, hibernate, JPA, ...
+
+- semanticky su rovnake
+
+Autowire pre anotacie:
+mozme nastavit pre:
+- premenne triedy
+- construktor
+- settre
+
+- automaticky dotiahne spravnu triedu podla typu...
+
+----------------------------
+Java configuracia:
+
+Default scope je singleton (jedna instancia pre spring container)
+Mozme definovat vlastny scope nad triedou:
+ @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON) - iba jedna instancia pre spring container
+ @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE) - unikatna instancia per request
+
+
 
 
 

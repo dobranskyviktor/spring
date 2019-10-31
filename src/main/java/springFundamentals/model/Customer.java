@@ -1,4 +1,4 @@
-package model;
+package springFundamentals.model;
 
 public class Customer
 {

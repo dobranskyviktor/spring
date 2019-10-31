@@ -1,12 +1,19 @@
-package repository;
+package springFundamentals.repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Customer;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Repository;
 
+import springFundamentals.model.Customer;
+
+@Repository
 public class HibernateCustomerRepositoryImpl implements CustomerRepository
 {
+    @Value("${dbUserName}")
+    private String dbUserName;
+
     @Override
     public List<Customer> finAll()
     {
@@ -22,6 +29,8 @@ public class HibernateCustomerRepositoryImpl implements CustomerRepository
 
         customerList.add(customer);
         customerList.add(customer1);
+
+        System.out.println(dbUserName);
 
         return customerList;
     }
